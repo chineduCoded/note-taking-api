@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "note-app"
+version = "0.1.0"
+description = ""
+authors = ["chineduCoded <chinedujohn17@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "app", from = "." }
+]
+
+[tool.poetry.scripts]
+note-app = "uvicorn app.main:app --reload"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+uvicorn = "^0.32.0"
+fastapi = {extras = ["standard"], version = "^0.115.4"}
+language-tool-python = "^2.8.1"
+setuptools = "^75.5.0"
+python-multipart = "^0.0.17"
+redis = "^5.2.0"
+sqlmodel = "^0.0.22"
+mistune = "^3.0.2"
+python-magic = "^0.4.27"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
